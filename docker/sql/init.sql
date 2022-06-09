@@ -16,6 +16,5 @@ INSERT INTO `homework.todos` (
   (2, 'kou matsumoto', '本を買う'),
   (3, 'masato sasho', 'ORANGE RANGE21周年ライブに行く'),
   (4, 'takumi koyama', 'スーパーイケメンボーイ'),
-  (5, 'yasuo kouzai', '最近パソコン買い換えた’),
-  (6, 'takahiro mori', 'MacBook Air買う')
+  (5, 'yasuo kouzai', '最近パソコン買い換えた’)
 ;
