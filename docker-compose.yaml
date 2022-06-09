@@ -10,8 +10,8 @@ services:
       - ./docker/sql/init.sql:/docker-entrypoint-initdb.d/init.sql
     environment:
       MYSQL_ROOT_PASSWORD: rootPassword
-      MYSQL_DATABASE: sample_database
-      MYSQL_USER:     user
+      MYSQL_DATABASE: homework_database
+      MYSQL_USER:     morita
       MYSQL_PASSWORD: password
       TZ: Asia/Tokyo
     ports:
