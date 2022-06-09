@@ -13,7 +13,7 @@ INSERT INTO `homework.todos` (
   `information`
 ) VALUES
   (1, 'hajime takeuchi', 'super hoge master'),
-  (2, 'kou matsumoto', '本を買う'),
+  (2, 'kou matsumoto', '日本妖怪怪異時点を買う'),
   (3, 'masato sasho', 'ORANGE RANGE21周年ライブに行く'),
   (4, 'takumi koyama', 'スーパーイケメンボーイ'),
   (5, 'yasuo kouzai', '最近パソコン買い換えた'),
