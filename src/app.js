@@ -14,7 +14,7 @@ app.use(cors()).use(express.json());
 
 // mysqlに接続
 const connection = mysql2.createConnection({
-  host: 'localhost',
+  host: 'localhost2',
   port: 3306,
   user: 'morita',
   password: 'password',
@@ -35,50 +35,50 @@ const connection = mysql2.createConnection({
 //   })
 // });
 
-// todoすべてを取得する
+// homework.todosすべてを取得する
 app.get("/api/morita", (req, res, next) => {
-  const sql = 'select * from todos';
+  const sql = 'select * from homework.todos';
   connection.query(sql, (err, results) => {
     if (err) throw err;
     res.json(results);
   });
 });
 
-// todo1件を作成する
+// homework.todos1件を作成する
 app.post("/api/morita", (req, res, next) => {
   const todo = req.body;
-  const sql = 'insert into todos set ?';
+  const sql = 'insert into homework.todos set ?';
   connection.query(sql, todo, (err, result) => {
     if (err) throw err;
     res.status(201).json(result.id);
   });
 });
 
-// todo1件を取得する
+// homework.todos1件を取得する
 app.get("/api/morita/:id", (req, res, next) => {
   const id = req.params.id;
-  const sql = 'select * from todos where ?';
+  const sql = 'select * from homework.todos where ?';
   connection.query(sql, { id: id }, (err, results) => {
     if (err) throw err;
     res.json(results[0]);
   });
 });
 
-// todo1件を更新する
+// homework.todos1件を更新する
 app.put("/api/morita/:id", (req, res, next) => {
   const id = req.params.id;
   const todo = req.body;
-  const sql = 'update todos set ? where ?';
+  const sql = 'update homework.todos set ? where ?';
   connection.query(sql, [todo, { id: id }], (err, result) => {
     if (err) throw err;
     res.status(200).send();
   });
 });
 
-// todo1件を削除する
+// thomework.todos件を削除する
 app.delete("/api/morita/:id", (req, res, next) => {
   const id = req.params.id;
-  const sql = 'delete from todos where ?';
+  const sql = 'delete from homework.todos where ?';
   connection.query(sql, { id: id }, (err, result) => {
     if (err) throw err;
     res.status(200).send();
