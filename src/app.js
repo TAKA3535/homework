@@ -14,7 +14,7 @@ app.use(cors()).use(express.json());
 
 // mysqlに接続
 const connection = mysql2.createConnection({
-  host: 'localhost2',
+  host: 'localhost',
   port: 3306,
   user: 'morita',
   password: 'password',
