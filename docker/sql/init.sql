@@ -1,4 +1,4 @@
-CREATE TABLE `homework.todos` (
+CREATE TABLE `homework_table` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL DEFAULT '',
   `information` text,
@@ -7,7 +7,7 @@ CREATE TABLE `homework.todos` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `homework.todos` (
+INSERT INTO `homework_table` (
   `id`,
   `name`,
   `information`
