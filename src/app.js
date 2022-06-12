@@ -3,8 +3,8 @@ const app = express();
 const cors = require("cors");
 const mysql2 = require('mysql2');
 
-// port 5000でサーバ立ち上げ
-const server = app.listen(5000, function () {
+// port 3000でサーバ立ち上げ
+const server = app.listen(3000, function () {
   console.log("Node.js is listening to PORT:" + server.address().port);
 });
 
