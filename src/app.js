@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
-const cors = require("cors")
-const mysql2 = require('mysql2')
+const cors = require("cors");
+const mysql2 = require('mysql2');
 
 // port 5000でサーバ立ち上げ
 const server = app.listen(5000, function () {
@@ -22,9 +22,9 @@ const connection = mysql2.createConnection({
 });
 
 //ブラウザ上とTarendの表示test
-// app.get("/api/test", (req, res, next) => {
-//   res.send("表示test");
-// });
+app.get("/api/test", (req, res, next) => {
+  res.send("表示test2");
+});
 
 // jsonが返ってくるapi
 // app.get("/api/res", (req, res, next) => {
